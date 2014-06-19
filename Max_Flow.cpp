@@ -80,7 +80,7 @@ void flow()
 			residual_graph[node_v][node_u]+=path_flow;
 		}
 
-		max_flow+=path_flow;//adds the maximum possible flow through that particular augmenting path to the max_flow of the graph;
+		max_flow+=path_flow;//adds the maximum possible flow through that particular augmenting path.
 	}
 
 	cout<<max_flow<<"\n";// outputs the maximum flow in the graph.
