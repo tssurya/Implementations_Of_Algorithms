@@ -1,4 +1,5 @@
-/* alogorithm used :- Edmunds Karp algorithm, that is modified version of Ford Fulkerson using a bfs to find the augmenting path.*/
+/* alogorithm used :- Edmunds Karp algorithm, 
+that is modified version of Ford Fulkerson using a bfs to find the augmenting path.*/
 
 
 #include<bits/stdc++.h>
@@ -11,7 +12,8 @@ int vis[MAX];// visited array to keep track of the visisted nodes.
 int parent[MAX];//parent array to keep track of the augmenting path found at each step.
 int source,sink;
 
-//function to check if an augmenting path exists using bfs and if it does to form the parent array that can track the augmenting path.
+/*function to check if an augmenting path exists using bfs 
+and if it does to form the parent array that can track the augmenting path.*/
 bool bfs()
 {
 	memset(vis,0,sizeof(vis));//clear the visited array.
@@ -20,7 +22,8 @@ bool bfs()
 	q.push(source);//push the source into the queue.
 	parent[source]=-1;//the parent of the source is initialised to -1;
 
-	//loop to find the shortest augmenting path present in the current residual graph. It breaks if the path is found returning true.
+	/*loop to find the shortest augmenting path present in the current residual graph. 
+	It breaks if the path is found returning true.*/
 	while(!q.empty())
 	{
 		int node_u=q.front();
@@ -29,7 +32,9 @@ bool bfs()
 		//loop to check over the adjacent edges in the graph.
 		for(int node_v=0; node_v < MAX; node_v++)
 		{
-			//if the node is not visited so far and the edge value/current capacity is positive then we add it to the queue.
+			/*if the node is not visited so far and
+			the edge value/current capacity is positive
+			then we add it to the queue.*/
 			if(!vis[node_v] and residual_graph[node_u][node_v]>0)
 			{
 				vis[node_v]=1;
