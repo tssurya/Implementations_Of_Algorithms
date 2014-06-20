@@ -21,6 +21,7 @@ bool bfs()
 	queue<int> q;
 	q.push(source);//push the source into the queue.
 	parent[source]=-1;//the parent of the source is initialised to -1;
+	vis[source]//marking the source as visited.
 
 	/*loop to find the shortest augmenting path present in the current residual graph. 
 	It breaks if the path is found returning true.*/
