@@ -25,10 +25,13 @@ bool bpm(int node_u)
 	{
 		if(graph[node_u][node_v] and !vis[node_v])
 		{
-			vis[node_v]=1;
-			matchL[node_u]=node_v;
-			matchR[node_v]=node_u;
-			return true;
+			if(matchR[node_v]<0 or bpm(matchR[node_v]))
+			{
+				vis[node_v]=1;
+				matchL[node_u]=node_v;
+				matchR[node_v]=node_u;
+				return true;
+			}
 		}
 	}
 	return false;
