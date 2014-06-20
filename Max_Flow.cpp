@@ -62,7 +62,7 @@ void flow()
 	//loop to add upp the flows found in the various augmenting paths.
 	while(bfs())
 	{
-		int path_flow=0;//contains the maximum possible flow in that particular path.
+		int path_flow=1e9;//contains the maximum possible flow in that particular path.
 
 		/*loop to backtrack the path from the sink to source using the parent array,
 		 found through bfs to get the maximum possible flow in that path.*/
