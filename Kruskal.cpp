@@ -5,11 +5,7 @@
 using namespace std;
 
 
-int dx[] = {-1,0,0,1,-1,-1,1,1};
-int dy[] = {0,-1,1,0,-1,1,-1,1};
-const double eps = 1e-9;
 
-using namespace std;
 int n,cost,v,p;
 vector<pair<int,pair<int,int> > >graph;
 string name;
